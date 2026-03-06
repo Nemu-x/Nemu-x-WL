@@ -4,6 +4,8 @@
     --muted:#9ca3af;
     --green:#22c55e;
     --green-hover:#16a34a;
+    --telegram:#229ED9;
+    --telegram-hover:#1b8fc4;
     --card-border:rgba(255,255,255,0.08);
     --shadow:0 20px 60px rgba(0,0,0,0.35);
 }
@@ -216,9 +218,19 @@ body{
 }
 
 .card h3{
-    margin:0 0 12px;
+    margin:0 0 10px;
     font-size:30px;
     line-height:1.1;
+}
+
+.badge-row{
+    margin:0 0 14px;
+}
+
+.badge-row img{
+    height:20px;
+    max-width:100%;
+    display:block;
 }
 
 .card p{
@@ -265,6 +277,16 @@ body{
     background:rgba(255,255,255,0.08);
 }
 
+.button-telegram{
+    background:var(--telegram);
+    color:white;
+}
+
+.button-telegram:hover{
+    background:var(--telegram-hover);
+    transform:translateY(-1px);
+}
+
 .info-grid{
     display:grid;
     grid-template-columns:repeat(3, minmax(0, 1fr));
@@ -296,6 +318,20 @@ body{
     color:var(--muted);
     padding:28px 20px 40px;
     font-size:14px;
+}
+
+.footer a{
+    color:#8ab4f8;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:#ffffff;
+}
+
+.footer-sep{
+    margin:0 10px;
+    opacity:.5;
 }
 
 @media (max-width: 980px){
