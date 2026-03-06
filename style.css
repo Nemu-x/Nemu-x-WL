@@ -1,13 +1,10 @@
 :root{
     --bg:#0b1220;
-    --bg-soft:#111827;
-    --card:#151d2b;
-    --card-border:rgba(255,255,255,0.08);
     --text:#f3f4f6;
     --muted:#9ca3af;
     --green:#22c55e;
     --green-hover:#16a34a;
-    --white-soft:rgba(255,255,255,0.06);
+    --card-border:rgba(255,255,255,0.08);
     --shadow:0 20px 60px rgba(0,0,0,0.35);
 }
 
@@ -34,7 +31,6 @@ body{
 
 .bg-glow{
     position:fixed;
-    inset:auto;
     border-radius:999px;
     filter:blur(80px);
     opacity:0.22;
@@ -75,16 +71,53 @@ body{
     text-align:center;
 }
 
+.topbar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
 .hero-badge{
     display:inline-block;
     padding:8px 14px;
-    border:1px solid var(--white-soft);
+    border:1px solid rgba(255,255,255,0.06);
     background:rgba(255,255,255,0.04);
     border-radius:999px;
     color:#d1d5db;
     font-size:14px;
-    margin-bottom:20px;
     backdrop-filter:blur(8px);
+}
+
+.lang-switcher{
+    display:flex;
+    gap:8px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.06);
+    padding:6px;
+    border-radius:999px;
+}
+
+.lang-btn{
+    border:none;
+    background:transparent;
+    color:#cbd5e1;
+    padding:8px 12px;
+    border-radius:999px;
+    cursor:pointer;
+    font-weight:700;
+    transition:all 0.2s ease;
+}
+
+.lang-btn:hover{
+    background:rgba(255,255,255,0.06);
+}
+
+.lang-btn.active{
+    background:#22c55e;
+    color:white;
 }
 
 .hero h1{
