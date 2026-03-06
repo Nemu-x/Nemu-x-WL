@@ -7,39 +7,102 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
 
-  <header>
-    <h1>Nemu-x WL</h1>
-    <p class="subtitle">Universal whitelist rule-set ecosystem</p>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">Whitelist ecosystem</div>
+      <h1>Nemu-x WL</h1>
+      <p class="hero-subtitle">
+        Universal whitelist rule-set ecosystem for Clash, Happ, and sing-box.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#projects">Explore projects</a>
+        <a class="button button-secondary" href="https://github.com/Nemu-x" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+      </div>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="cards">
-
-      <div class="card">
-        <h2>Clash</h2>
-        <p>Rule provider</p>
-        <a class="button" href="https://github.com/Nemu-x/privWL-clash">Open Repo</a>
+  <main class="container">
+    <section class="projects" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Choose the client you use and open the corresponding repository.</p>
       </div>
 
-      <div class="card">
-        <h2>Happ</h2>
-        <p>Routing profile</p>
-        <a class="button" href="https://github.com/Nemu-x/privWL-happ">Open Repo</a>
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <div class="icon">⚡</div>
+            <span class="tag">Clash</span>
+          </div>
+          <h3>Clash</h3>
+          <p>
+            Rule provider for Clash-based clients with auto-updating whitelist domains.
+          </p>
+          <div class="card-actions">
+            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-clash" target="_blank" rel="noopener noreferrer">Open Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="icon">📱</div>
+            <span class="tag">Happ</span>
+          </div>
+          <h3>Happ</h3>
+          <p>
+            Routing profile and geosite integration for Happ Proxy Utility.
+          </p>
+          <div class="card-actions">
+            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-happ" target="_blank" rel="noopener noreferrer">Open Repo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="icon">🧩</div>
+            <span class="tag">sing-box</span>
+          </div>
+          <h3>Sing-box</h3>
+          <p>
+            Remote binary rule-set for sing-box clients using whitelist routing.
+          </p>
+          <div class="card-actions">
+            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-singbox" target="_blank" rel="noopener noreferrer">Open Repo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <div class="info-card">
+        <h4>How it works</h4>
+        <p>
+          One source list is transformed into client-specific formats and updated automatically.
+        </p>
       </div>
 
-      <div class="card">
-        <h2>Sing-box</h2>
-        <p>Remote rule-set</p>
-        <a class="button" href="https://github.com/Nemu-x/privWL-singbox">Open Repo</a>
+      <div class="info-card">
+        <h4>Auto updates</h4>
+        <p>
+          All repositories are rebuilt through GitHub Actions whenever the source rules change.
+        </p>
       </div>
 
-    </div>
-  </div>
+      <div class="info-card">
+        <h4>Open source</h4>
+        <p>
+          Transparent rule generation, public repositories, and easy manual verification.
+        </p>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    Nemu-x WL ecosystem
+  <footer class="footer">
+    <span>Nemu-x WL ecosystem</span>
   </footer>
-
 </body>
 </html>
