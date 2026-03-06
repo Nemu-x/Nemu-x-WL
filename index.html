@@ -12,15 +12,36 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-badge">Whitelist ecosystem</div>
+      <div class="topbar">
+        <div class="hero-badge" data-i18n="badge">Whitelist ecosystem</div>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+      </div>
+
       <h1>Nemu-x WL</h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-i18n="subtitle">
         Universal whitelist rule-set ecosystem for Clash, Happ, and sing-box.
       </p>
 
       <div class="hero-actions">
-        <a class="button button-primary" href="https://github.com/Nemu-x?tab=repositories" target="_blank" rel="noopener noreferrer">View repositories</a>
-        <a class="button button-secondary" href="https://github.com/Nemu-x" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+        <a
+          class="button button-primary"
+          href="https://github.com/Nemu-x?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="btn_repos"
+        >View repositories</a>
+
+        <a
+          class="button button-secondary"
+          href="https://github.com/Nemu-x"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="btn_profile"
+        >GitHub profile</a>
       </div>
     </div>
   </header>
@@ -28,8 +49,8 @@
   <main class="container">
     <section class="projects" id="projects">
       <div class="section-head">
-        <h2>Projects</h2>
-        <p>Choose the client you use and open the corresponding repository.</p>
+        <h2 data-i18n="projects_title">Projects</h2>
+        <p data-i18n="projects_subtitle">Choose the client you use and open the corresponding repository.</p>
       </div>
 
       <div class="cards">
@@ -39,11 +60,11 @@
             <span class="tag">Clash</span>
           </div>
           <h3>Clash</h3>
-          <p>
+          <p data-i18n="clash_desc">
             Rule provider for Clash-based clients with auto-updating whitelist domains.
           </p>
           <div class="card-actions">
-            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-clash" target="_blank" rel="noopener noreferrer">Open Repo</a>
+            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-clash" target="_blank" rel="noopener noreferrer" data-i18n="open_repo">Open Repo</a>
           </div>
         </article>
 
@@ -53,11 +74,11 @@
             <span class="tag">Happ</span>
           </div>
           <h3>Happ</h3>
-          <p>
+          <p data-i18n="happ_desc">
             Routing profile and geosite integration for Happ Proxy Utility.
           </p>
           <div class="card-actions">
-            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-happ" target="_blank" rel="noopener noreferrer">Open Repo</a>
+            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-happ" target="_blank" rel="noopener noreferrer" data-i18n="open_repo">Open Repo</a>
           </div>
         </article>
 
@@ -67,11 +88,11 @@
             <span class="tag">sing-box</span>
           </div>
           <h3>Sing-box</h3>
-          <p>
+          <p data-i18n="singbox_desc">
             Remote binary rule-set for sing-box clients using whitelist routing.
           </p>
           <div class="card-actions">
-            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-singbox" target="_blank" rel="noopener noreferrer">Open Repo</a>
+            <a class="button button-primary" href="https://github.com/Nemu-x/privWL-singbox" target="_blank" rel="noopener noreferrer" data-i18n="open_repo">Open Repo</a>
           </div>
         </article>
       </div>
@@ -79,22 +100,22 @@
 
     <section class="info-grid">
       <div class="info-card">
-        <h4>How it works</h4>
-        <p>
+        <h4 data-i18n="info1_title">How it works</h4>
+        <p data-i18n="info1_text">
           One source list is transformed into client-specific formats and updated automatically.
         </p>
       </div>
 
       <div class="info-card">
-        <h4>Auto updates</h4>
-        <p>
+        <h4 data-i18n="info2_title">Auto updates</h4>
+        <p data-i18n="info2_text">
           All repositories are rebuilt through GitHub Actions whenever the source rules change.
         </p>
       </div>
 
       <div class="info-card">
-        <h4>Open source</h4>
-        <p>
+        <h4 data-i18n="info3_title">Open source</h4>
+        <p data-i18n="info3_text">
           Transparent rule generation, public repositories, and easy manual verification.
         </p>
       </div>
@@ -102,7 +123,77 @@
   </main>
 
   <footer class="footer">
-    <span>Nemu-x WL ecosystem</span>
+    <span data-i18n="footer">Nemu-x WL ecosystem</span>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        badge: "Whitelist ecosystem",
+        subtitle: "Universal whitelist rule-set ecosystem for Clash, Happ, and sing-box.",
+        btn_repos: "View repositories",
+        btn_profile: "GitHub profile",
+        projects_title: "Projects",
+        projects_subtitle: "Choose the client you use and open the corresponding repository.",
+        clash_desc: "Rule provider for Clash-based clients with auto-updating whitelist domains.",
+        happ_desc: "Routing profile and geosite integration for Happ Proxy Utility.",
+        singbox_desc: "Remote binary rule-set for sing-box clients using whitelist routing.",
+        open_repo: "Open Repo",
+        info1_title: "How it works",
+        info1_text: "One source list is transformed into client-specific formats and updated automatically.",
+        info2_title: "Auto updates",
+        info2_text: "All repositories are rebuilt through GitHub Actions whenever the source rules change.",
+        info3_title: "Open source",
+        info3_text: "Transparent rule generation, public repositories, and easy manual verification.",
+        footer: "Nemu-x WL ecosystem"
+      },
+      ru: {
+        badge: "Экосистема whitelist",
+        subtitle: "Универсальная экосистема whitelist-правил для Clash, Happ и sing-box.",
+        btn_repos: "Все репозитории",
+        btn_profile: "GitHub профиль",
+        projects_title: "Проекты",
+        projects_subtitle: "Выберите нужный клиент и откройте соответствующий репозиторий.",
+        clash_desc: "Провайдер правил для клиентов на базе Clash с автообновляемым whitelist списком доменов.",
+        happ_desc: "Профиль маршрутизации и интеграция geosite для Happ Proxy Utility.",
+        singbox_desc: "Удалённый бинарный rule-set для клиентов sing-box с whitelist-маршрутизацией.",
+        open_repo: "Открыть репозиторий",
+        info1_title: "Как это работает",
+        info1_text: "Один исходный список автоматически преобразуется в форматы для разных клиентов.",
+        info2_title: "Автообновление",
+        info2_text: "Все репозитории пересобираются через GitHub Actions при изменении исходных правил.",
+        info3_title: "Открытый исходный код",
+        info3_text: "Прозрачная генерация правил, публичные репозитории и простая ручная проверка.",
+        footer: "Экосистема Nemu-x WL"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
+
+      localStorage.setItem("nemux-wl-lang", lang);
+    }
+
+    const savedLang = localStorage.getItem("nemux-wl-lang");
+    const browserLang = navigator.language && navigator.language.toLowerCase().startsWith("ru") ? "ru" : "en";
+    const initialLang = savedLang || browserLang;
+
+    setLanguage(initialLang);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+  </script>
 </body>
 </html>
